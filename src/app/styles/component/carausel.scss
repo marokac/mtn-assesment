@@ -1,0 +1,51 @@
+
+.carousel {
+   position: relative;
+   height: 35em;
+   width :$containerWidth;
+   margin: 0 auto;
+   display: flex;
+   overflow-x:hidden;
+   overflow-y:visible;
+   align-items: center;
+
+   &_slider{
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    height: 64%;
+    display: flex;
+    justify-content: space-between;
+  
+   &--item{ 
+    display:flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+}
+}
+   
+}
+  .carousel-btn{
+   display:flex;
+   width:40%;
+   margin:0 auto;
+   justify-content: space-between;
+   &--sm{
+       background:transparent;
+       width:40px;
+       height: 40px;
+       border-radius: 50%;
+       color:white;
+       background-color:black;
+       border: 0px;
+       &:hover{
+        opacity:0.6; 
+       }
+
+       &:active{
+           outline: none;
+       }
+
+   }
+  }

@@ -1,0 +1,43 @@
+.u{
+    &-pad-v-md{
+        padding-top:3px;
+        padding-bottom:3px;
+    }
+    &-float-lft{
+        float:left;
+    }
+    &-float-rht{
+        float:right;
+    }
+    &-full-wd{
+        width: 100%; 
+    }
+    &-wd-50{
+        width: 50%;
+    }
+    &-full-hieght{
+        height:100vh;
+    }
+    &-dsp-block{
+        display:block;
+    }
+    &-text-bold{
+        font-weight: bold;
+    }
+    &-font-size-md{
+        font-size:1.6em;
+    }
+    &-pad-none{
+        padding:0;
+    }
+
+    &-marg-none{
+     margin:0;
+    }
+    &-text-wrap{
+        overflow-wrap: break-word;
+    }
+    &-dir-colomn{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="cart" [class.cart--active]="true">
+    <div class="cart_icon">
+        <img *ngIf="data.icon" [src]="data.icon">
+        <img *ngIf="!data.icon" src="../../../assets/image-holder.PNG">
+    </div>
+    <div class="cart_title">
+        <p class="u-marg-none u-text-wrap">{{data.title}}</p>
+         <app-button [data]="{type:'trans',title:'START HERE'}"></app-button>
+    </div>
+</div>

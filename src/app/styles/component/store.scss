@@ -1,0 +1,18 @@
+.section{
+    &_main{
+        background-color: #E5F4F5;
+        position: relative;
+       
+     &--title{
+        padding-left: 7em;
+        margin-bottom: -40px;
+        }
+    }
+&--left{
+    background-color:#F6CDCD; 
+}
+&--right{
+    background-color:#F6CDCD; 
+}
+
+}

@@ -1,0 +1,21 @@
+.c-header{
+  width: 100%;
+  box-shadow:$header-shadow;
+  padding:.6em 8em;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index:1000;
+  &_logo{
+      width:4em;
+      height:6rem;
+      float: right;
+      position: absolute;
+      right:0;
+      top:0;
+      border: 3px solid white;
+  }
+  &_logo-wrap{
+   position: relative;
+  }
+}
