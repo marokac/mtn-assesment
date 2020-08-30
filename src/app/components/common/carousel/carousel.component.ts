@@ -9,7 +9,6 @@ import { EllmentDirective } from 'src/app/diractives/ellment.directive';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
   @Input() items: Item[];
