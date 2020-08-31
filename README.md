@@ -23,3 +23,8 @@ The `ng serve` command builds (compiles TypeScript and copies assets) the applic
 Shut it down manually with `Ctrl-C`.
 
 
+
+
+## Screenshot
+
+![Alt text](./screen-shoot.PNG?raw=true "dashbord")
