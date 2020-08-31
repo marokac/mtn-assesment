@@ -4,4 +4,14 @@
     &-trans{
         background:transparent;
     }
+    &-int{
+        width: 10px;
+        height:10px;
+        border-radius: 50%;
+        background-color: rgb(219, 209, 209);
+        transition: all;
+        &-active{
+            background-color: black;
+        }
+    }
 }

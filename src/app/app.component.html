@@ -1,6 +1,7 @@
 <app-header FxLayout="row" [data]="headerData">
-    <app-nav [navItems]="navItems " fxFlex="50%"></app-nav>
-    <div style="padding:8px;" fxFlex="50%">
+    <app-nav [navItems]="navItems" fxLayout="row" fxLayout.sm="column" fxLayoutAlign="start" fxFlex.gt-sm="50%"
+        fxFlex="100%"></app-nav>
+    <div class="u-pad-sm" fxFlex.gt-sm="50%" fxFlex="100%">
         <div class="u-float-rht">Personal</div>
     </div>
 </app-header>

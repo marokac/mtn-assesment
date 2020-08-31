@@ -1,7 +1,7 @@
 <div class="u-dir-colomn">
     <div class="carousel" fxLayout="row" fxFlex="100%" *ngIf="items.length > 0" id="container" #container>
         <div class="carousel_slider u-pad-v-md" id="slider" #slider>
-            <div *ngFor="let el of items" fxFlex="100"   fxFlex.md="33" fxFlex.md="40"   fxFlex.md="33"
+            <div *ngFor="let el of items" fxFlex="100" fxFlex.md="33" fxFlex.md="40" fxFlex.md="33"
                 class="carousel_slider--item u-full-wd">
                 <app-cart class="u-full-wd" [data]="el">
                 </app-cart>
@@ -9,8 +9,13 @@
         </div>
     </div>
     <div class="carousel-btn" fxLayout="row" fxFlex="100">
-        <button class="u-float-lft carousel-btn--sm" (click)="prevElement()">
-            <</button>
-                <button class="u-float-rht carousel-btn--sm" id="next" (click)="nextElement()">></button>
+        <button [disabled]="current==0" class="u-float-lft carousel-btn--sm" (click)="prevElement()">
+        < </button>
+        <!-- TO DO -->
+      <!-- <div class="u-pad-sm"*ngFor="let el of items; let i= index">
+          <button class="c-btn c-btn-int" [class.c-btn-int-active]="current == i"></button>
+      </div> -->
+        <button [disabled]="current===slideCount - 1" class="u-float-rht carousel-btn--sm" id="next"
+        (click)="nextElement()">></button>
     </div>
 </div>

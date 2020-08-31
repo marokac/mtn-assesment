@@ -70,29 +70,35 @@ export class CarouselComponent implements OnInit, AfterViewInit {
       edgeResistance: 0.6,
       bounds: "#container",
       throwProps: true,
+      onDragParams: [this.current,this.slideCount],
       onDrag: this.setProgess,
       onThrowUpdate: this.updateSlides
     });
 
-  
-
   }
 
-  setProgess() {
+  setProgess(curr,len) {
+
     var x = gsap.getProperty("#slider", "x");
     this.targetX = (x as number) 
-    console.log(this.boxWidth);
     this.targetX =
-    this.targetX < -1 * (this.slideCount - 1) ? -1 * (this.slideCount - 1) : this.targetX;
+    this.targetX < -1 * (len - 1) ? -1 * (len - 1) : this.targetX;
     this.lastTarget = this.targetX;
+
   }
 
   prevElement() {
     if (this.targetX < 2) {
-      this.slides[this.current].nativeElement.style.transform = "none";
+
+      this.slides[this.current]
+      .nativeElement.style.transform = "none";
+
       this.targetX++;
       this.current--;
-      this.slides[this.current].nativeElement.style.transform = "scaleY(1.4)";
+
+      this.slides[this.current]
+      .nativeElement.style.transform = "scaleY(1.4)";
+
       TweenMax.to(this.elSlider, 1, {
         x: (this.boxWidth * this.targetX) /5 ,
         onUpdate: this.setProgess
@@ -103,10 +109,14 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
   nextElement() {
     if (this.targetX > -1 * (this.slideCount -3)) {
-      this.slides[this.current].nativeElement.style.transform = "none";
+      //remove the styles from current ell
+      this.removeTrans(this.current);
+     // increment Current
       this.targetX--;
       this.current++;
-      this.slides[this.current].nativeElement.style.transform = "scaleY(1.4)";
+
+      this.addTrans(this.current);
+
       TweenMax.to(this.elSlider, 1, {
         x: (this.boxWidth * this.targetX)/5,
         onUpdate: this.setProgess
@@ -117,6 +127,18 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
   updateSlides() {
     gsap.set(this.elSlider, { x: -this.ratioX / this.ratio });
+  }
+
+  removeTrans(curr){
+    this.slides[curr]
+    .nativeElement
+    .style.transform = "none";
+  }
+
+  addTrans(curr){
+    this.slides[curr]
+    .nativeElement
+    .style.transform = "scaleY(1.4)";
   }
 }
 
